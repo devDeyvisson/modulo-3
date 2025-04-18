@@ -14,9 +14,10 @@ let listUsers = [
 ];
 
 rl.question("Digite o email que deseja buscar:", (email) => {
+
     let emailUser = email.trim();
-    let foundUser = listUsers.find(
-    user => user.email === emailUser);
+
+    let foundUser = searchUserByEmail(emailUser);
 
     if(foundUser) {
         console.log("O usuário está presente na lista!");
@@ -27,3 +28,7 @@ rl.question("Digite o email que deseja buscar:", (email) => {
 
     rl.close();
 })
+
+function searchUserByEmail(email) {
+    return listUsers.find(user => user.email === email);
+}
