@@ -1,4 +1,4 @@
-let random = Math.floor(Math.random() * 10) + 1;
+let random = Math.floor(Math.random() * 50) + 1;
 
 const readline = require('readline');
 
@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 console.log('Número gerado: ', random)
 
 console.log('Seja muito bem-vindo(a) ao jogo de Adivinhação!');
-console.log('Tente Adivinhar um número de 1 a 10.');
+console.log('Tente Adivinhar um número de 1 a 50.');
 
 rl.setPrompt('Digite um número: ');
 rl.prompt();
